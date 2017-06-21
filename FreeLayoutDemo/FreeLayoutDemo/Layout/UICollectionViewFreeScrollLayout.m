@@ -13,6 +13,9 @@
     NSMutableArray *_itemAttributesArray;
 }
 @end
+
+IB_DESIGNABLE
+
 @implementation UICollectionViewFreeScrollLayout
 
 - (instancetype)init{
@@ -71,7 +74,7 @@
             //保存的是item的属性
             UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
             
-            attr.frame = CGRectMake(j * width, i * height, width, height);
+            attr.frame = CGRectMake(j * (self.columnSpace + width), i * (self.interSpace + height), width, height);
             [_itemAttributesArray addObject:attr];
         }
     }

@@ -22,20 +22,16 @@
 @interface UICollectionViewFreeScrollLayout : UICollectionViewLayout
 
 @property (nonatomic, assign) id<UICollectionViewFreeScrollLayoutDataSource> dataSource;
-/**
- 上下左右的空隙
- */
-@property (nonatomic, assign) UIEdgeInsets sectionInsets;
 
 /**
  列与列之间的空隙
  */
-@property (nonatomic, assign) NSInteger columnSpace;
+@property (nonatomic, assign) IBInspectable NSInteger columnSpace;
 
 /**
  行间距
  */
-@property (nonatomic, assign) NSInteger interSpace;
+@property (nonatomic, assign) IBInspectable NSInteger interSpace;
 
 
 @end
